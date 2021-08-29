@@ -1,5 +1,5 @@
-name: 'b2-upload'
-description: 'upload files to Backblaze B2'
+name: 'Upload file to Backblaze B2'
+description: 'upload file to Backblaze B2'
 author: 'sksat <sksat@sksat.net>'
 
 inputs:
