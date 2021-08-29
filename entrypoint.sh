@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -eu
+
 B2_KEY_ID="$1"
 B2_KEY="$2"
 B2_BUCKET="$3"
