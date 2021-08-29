@@ -1,0 +1,25 @@
+name: test Action
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'action.yml'
+      - 'requirements.txt'
+      - 'Dockerfile'
+      - '.github/workflows/test-action.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: ./
+        with:
+          key_id: ${{ secrets.B2_KEY_ID }}
+          key: ${{ secrets.B2_KEY }}
+          bucket: ${{ secrets.B2_BUCKET }}
+          src: README.md
+          dest: README.md

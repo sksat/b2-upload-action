@@ -1,0 +1,30 @@
+name: 'b2-upload'
+description: 'upload files to Backblaze B2'
+author: 'sksat <sksat@sksat.net>'
+
+inputs:
+  key_id:
+    description: key ID
+    required: true
+  key:
+    description: key (listBuckets capability required)
+    required: true
+  bucket:
+    description: bucket
+    required: true
+  src:
+    description: source file or directory
+    required: true
+  dest:
+    description: destination
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/sksat/b2-upload-action:develop'
+  args:
+    - ${{ inputs.key_id }}
+    - ${{ inputs.key }}
+    - ${{ inputs.bucket }}
+    - ${{ inputs.src }}
+    - ${{ inputs.dest }}
