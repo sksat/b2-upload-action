@@ -7,13 +7,16 @@ inputs:
     description: key ID
     required: true
   key:
-    description: key
+    description: key (listBuckets capability required)
     required: true
   bucket:
     description: bucket
     required: true
   src:
     description: source file or directory
+    required: true
+  dest:
+    description: destination
     required: true
 
 runs:
@@ -24,3 +27,4 @@ runs:
     - ${{ inputs.key }}
     - ${{ inputs.bucket }}
     - ${{ inputs.src }}
+    - ${{ inputs.dest }}
