@@ -20,3 +20,4 @@ jobs:
           key: hoge
           bucket: hoge
           src: README.md
+          dest: README.md
