@@ -5,6 +5,8 @@ on:
   push:
     paths:
       - 'action.yml'
+      - 'requirements.txt'
+      - 'Dockerfile'
       - '.github/workflows/test-action.yml'
 
 jobs:
