@@ -15,9 +15,6 @@ inputs:
   src:
     description: source file or directory
     required: true
-  name:
-    description: destination filename
-    required: true
 
 runs:
   using: 'docker'
@@ -27,4 +24,3 @@ runs:
     - ${{ inputs.key }}
     - ${{ inputs.bucket }}
     - ${{ inputs.src }}
-    - ${{ inputs.name }}
