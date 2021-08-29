@@ -18,8 +18,8 @@ jobs:
 
       - uses: ./
         with:
-          key_id: hoge
-          key: hoge
-          bucket: hoge
+          key_id: ${{ github.secrets.B2_KEY_ID }}
+          key: ${{ github.secrets.B2_KEY }}
+          bucket: ${{ github.secrets.B2_BUCKET }}
           src: README.md
           dest: README.md
