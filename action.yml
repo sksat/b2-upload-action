@@ -21,7 +21,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/sksat/b2-upload-action:develop'
+  image: 'docker://ghcr.io/sksat/b2-upload-action:file-check'
   args:
     - ${{ inputs.key_id }}
     - ${{ inputs.key }}
