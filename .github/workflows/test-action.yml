@@ -6,6 +6,7 @@ on:
     paths:
       - 'action.yml'
       - 'requirements.txt'
+      - 'entrypoint.sh'
       - 'Dockerfile'
       - '.github/workflows/test-action.yml'
 
